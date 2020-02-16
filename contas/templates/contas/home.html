@@ -1,0 +1,33 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %} lista {% endblock %}
+
+{% block content %} 
+
+
+
+<div class=" container container-fluid" >
+
+    <h2 class="titulo">
+        Olá !
+    </h2>
+    <p>
+        Seja Bem Vindo!
+    </p>
+
+    <p>
+        agora são: {{ now }}
+    </p>
+ 
+    <ul>
+     {% for transacao in transacoes %}
+         {{transacao}}
+     {% endfor %}
+    </ul>
+
+</div>
+
+
+{% endblock %}

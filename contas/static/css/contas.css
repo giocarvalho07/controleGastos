@@ -1,0 +1,40 @@
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+button {
+    color: orange;
+}
+
+h2{
+    color: blue;
+}
+
+.titulo{
+    color: blue;
+}
+
+footer{
+    background-color: green;
+}
+
+.page-footer{
+    background-color: green;
+}
+
+.container-fluid{
+    padding: 0px;
+    
+}
+
+form{
+    margin-top: 40px;
+}
+
+.navbar{
+    border-bottom: 1px solid green;
+    margin-bottom: 20px;
+}

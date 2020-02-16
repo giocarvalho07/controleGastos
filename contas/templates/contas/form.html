@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Nova Transação {% endblock %}
+
+{% block content %} 
+
+<div class=" container container-fluid" >
+
+
+
+<form  method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Salvar</button>
+    
+
+    {% if transacao_deletar %}
+        <button>
+            <a href="{% url 'url_deletar' transacao_deletar.id %}">Deletar</a>
+        </button>
+    {% endif %}
+
+</form>
+
+</div>
+
+{% endblock %}

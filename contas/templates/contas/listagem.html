@@ -1,0 +1,32 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %} lista {% endblock %}
+
+{% block content %} 
+
+<div class=" container container-fluid" >
+
+<h2>Acompanhe os gastos</h2>
+
+<ul>
+{% for transacao in transacoes %}
+
+
+    <li>  <a href="{% url 'url_editar' transacao.id %}"> Descrição: {{ transacao.descricao }}  --  Data: {{ transacao.data_transacao }}  -- R$: - {{ transacao.valor }}  --  
+        Categoria: {{ transacao.categoria }} -- Observação: {{ transacao.observacao }} </a></li>
+
+
+{% endfor %}
+</ul> 
+
+<button>
+    <a href="{% url 'url_novatransacao' %}">
+        Novo
+    </a>
+</button>
+
+</div>
+
+{% endblock %}
